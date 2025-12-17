@@ -3,6 +3,7 @@ package com.surya.MyFirstProject.entity;
 import jdk.jfr.DataAmount;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NonNull;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,6 +16,7 @@ import java.util.Date;
 public class JournalEntry {
     @Id
     private ObjectId id;
+    @NonNull
     private String title;
     private String content;
     private LocalDateTime date;
